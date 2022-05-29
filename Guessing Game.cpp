@@ -97,7 +97,7 @@ jump4:
         break;
     case 'C':
     case 'c':
-        std::cout << "holla " << playersName;
+        std::cout << "hola " << playersName;
         break;
     default:
         goto jump3;
