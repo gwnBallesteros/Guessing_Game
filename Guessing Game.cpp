@@ -6,6 +6,8 @@
 //****************************************************************
 
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include <iomanip>
 #include <stdlib.h>
 #include <string>
@@ -19,6 +21,8 @@ int main()
     //Declaring variables
     char pressStart, levelDifficulty;
     std::string playersName;
+    int num, guess, i;
+    bool guessed = false;
 
     //Start 
 jump1:
@@ -89,20 +93,132 @@ jump4:
     {
     case 'A':
     case 'a':
-        std::cout << "hello";
+        std::cout << "==============================================" << '\n';
+        std::cout << std::endl;
+        std::cout << "You have 3 goes to guess the secret number" << '\n';
+        std::cout << "HINT: It is a number less than 25!" << '\n';
+        std::cout << std::endl;
+
+        srand(time(0));
+        num = rand() % 24;
+
+        for (i = 1; i <= 8; i++)
+        {
+            std::cout << "Enter guess: ";
+            std::cin >> guess;
+
+            //Check guess
+            if (guess == num)
+            {
+                guessed = true;
+                break;
+            }
+            else if (guess < num)
+                std::cout << "Your guess is lower than the number\n"
+                << " Guess Again" << '\n' << std::endl;
+            else
+                std::cout << "Your guess is higher than the number\n"
+                << "Guess Again" << '\n' << std::endl;
+        }
+
+        if (guessed)
+        {
+            goto jump6;
+        }
+        else
+            goto jump5;
         break;
     case 'B':
     case 'b':
-        std::cout << "hello " << playersName;
+        std::cout << "==============================================" << '\n';
+        std::cout << std::endl;
+        std::cout << "You have 3 goes to guess the secret number" << '\n';
+        std::cout << "HINT: It is a number less than 50!" << '\n';
+        std::cout << std::endl;
+
+        srand(time(0));
+        num = rand() % 49;
+
+        for (i = 1; i <= 7; i++)
+        {
+            std::cout << "Enter guess: ";
+            std::cin >> guess;
+
+            //Check guess
+            if (guess == num)
+            {
+                guessed = true;
+                break;
+            }
+            else if (guess < num)
+                std::cout << "Your guess is lower than the number\n"
+                << " Guess Again" << std::endl;
+            else
+                std::cout << "Your guess is higher than the number\n"
+                << "Guess Again" << std::endl;
+        }
+
+        if (guessed)
+        {
+            goto jump5;
+        }
+        else
+        {
+            goto jump6;
+        }
         break;
+
     case 'C':
     case 'c':
-        std::cout << "hola " << playersName;
+        std::cout << "==============================================" << '\n';
+        std::cout << std::endl;
+        std::cout << "You have 3 goes to guess the secret number" << '\n';
+        std::cout << "HINT: It is a number less than 100!" << '\n';
+        std::cout << std::endl;
+
+        srand(time(0));
+        num = rand() % 99;
+
+        for (i = 1; i <= 5; i++)
+        {
+            std::cout << "Enter guess: ";
+            std::cin >> guess;
+
+            //Check guess
+            if (guess == num)
+            {
+                guessed = true;
+                break;
+            }
+            else if (guess < num)
+                std::cout << "Your guess is lower than the number\n"
+                << " Guess Again" << std::endl;
+            else
+                std::cout << "Your guess is higher than the number\n"
+                << "Guess Again" << std::endl;
+        }
+
+        if (guessed)
+        {
+            goto jump5;
+        }
+        else
+        {
+            goto jump6;
+        }
         break;
+
     default:
         goto jump3;
     }
 
+jump5:
+    system("CLS");
+    std::cout << "You Lose";
+
+jump6:
+    system("CLS");
+    std::cout << "You Win!";
 
     //the while loop for guessing numbers
 
