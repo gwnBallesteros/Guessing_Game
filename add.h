@@ -64,16 +64,30 @@ void casHeaderThree()
 void win()
 {
     system("CLS");
-    std::cout << "You Win!!";
-    std::cout << std::endl;
-    system("pause");
+    std::cout << "==============================================" << '\n';
+    std::left;
+    std::cout << std::setw(1) << "|";
+    std::cout << std::setw(45) << "|" << '\n';
+    std::cout << std::setw(1) << "|";
+    std::cout << std::setw(25) << "YOU WIN";
+    std::cout << std::setw(20) << "|" << '\n';
+    std::cout << std::setw(1) << "|";
+    std::cout << std::setw(45) << "|" << '\n';
+    std::cout << "==============================================" << '\n';
 }
 
 void lose()
 {
     system("CLS");
-    std::cout << "You Lose";
-    std::cout << std::endl;
-    system("pause");
+    std::cout << "==============================================" << '\n';
+    std::left;
+    std::cout << std::setw(1) << "|";
+    std::cout << std::setw(45) << "|" << '\n';
+    std::cout << std::setw(1) << "|";
+    std::cout << std::setw(25) << "YOU LOSE";
+    std::cout << std::setw(20) << "|" << '\n';
+    std::cout << std::setw(1) << "|";
+    std::cout << std::setw(45) << "|" << '\n';
+    std::cout << "==============================================" << '\n';
 }
 

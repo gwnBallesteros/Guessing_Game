@@ -99,45 +99,49 @@ jump3:
 
         for (i = 0; i <= 7; i++)
         {
+            std::cout << "==============================================" << '\n';
             std::cout << "Enter guess: ";
             std::cin >> guess;
+            std::cout << "==============================================" << '\n';
 
             if (guess == num)
             {
-                std::cout << "\nCongrats, you have guessed the right number which is, " << num;
+                win();
+                std::cout << "\nCongrats " << playersName << ", you have guessed the right \n"
+                    << "number which is, " << num << ".";
                 std::cout << "\nNumber of turns you have used: " << i + 1 << '\n' << std::endl;
                 system("pause");
-                win();
                 goto jump5;
                 break;
             }
             else if (guess < num)
             {
-                std::cout << "\nYour guess is lower than the number, Turns left: " << 7 - (i + 1)
-                    << "\n";
+                std::cout << "\nYour guess is lower than the number, Turns left: " << 7 - (i + 1);
+
                 if (7 - (i + 1) > 0)
                 {
                     std::cout << "\nTry again, entering a number higher than previous!"
                         << "\n" << std::endl;
+                    system("CLS");
                 }
             }
             else if (guess > num)
             {
-                std::cout << "\nYour guess is higher than number, Turns left: " << 7 - (i + 1)
-                    << "\n";
+                std::cout << "\nYour guess is higher than number, Turns left: " << 7 - (i + 1);
+
                 if (7 - (i + 1) > 0)
                 {
                     std::cout << "\nTry again, entering a number lower than previous! "
                         << "\n" << std::endl;
+                    system("CLS");
                 }
             }
             if (i == 6)
             {
-                
-                std::cout << "\n\nSorry, you failed to guess the right number.";
+                lose();
+                std::cout << "\n\nSorry " << playersName << " failed to guess the right number.";
                 std::cout << "\nThe right answer is: " << num << '\n' << std::endl;
                 system("pause");
-                lose();
                 goto jump5;
                 break;
             }
@@ -152,22 +156,25 @@ jump3:
 
         for (i = 0; i <= 5; i++)
         {
+            std::cout << "==============================================" << '\n';
             std::cout << "Enter guess: ";
             std::cin >> guess;
+            std::cout << "==============================================" << '\n';
 
             if (guess == num)
             {
-                std::cout << "\nCongrats, you have guessed the right number which is, " << num;
+                win();
+                std::cout << "\nCongrats " << playersName << ", you have guessed the right \n"
+                    << "number which is, " << num << ".";
                 std::cout << "\nNumber of turns you have used: " << i + 1 << '\n' << std::endl;
                 system("pause");
-                win();
                 goto jump5;
                 break;
             }
             else if (guess < num)
             {
-                std::cout << "\nYour guess is lower than the number, Turns left: " << 5 - (i + 1)
-                    << "\n";
+                std::cout << "\nYour guess is lower than the number, Turns left: " << 5 - (i + 1);
+
                 if (5 - (i + 1) > 0)
                 {
                     std::cout << "\nTry again, entering a number higher than previous!"
@@ -176,8 +183,8 @@ jump3:
             }
             else if (guess > num)
             {
-                std::cout << "\nYour guess is higher than number, Turns left: " << 5 - (i + 1)
-                    << "\n";
+                std::cout << "\nYour guess is higher than number, Turns left: " << 5 - (i + 1);
+
                 if (5 - (i + 1) > 0)
                 {
                     std::cout << "\nTry again, entering a number lower than previous! "
@@ -186,11 +193,10 @@ jump3:
             }
             if (i == 4)
             {
-
-                std::cout << "\n\nSorry, you failed to guess the right number.";
+                lose();
+                std::cout << "\n\nSorry " << playersName << " failed to guess the right number.";
                 std::cout << "\nThe right answer is: " << num << '\n' << std::endl;
                 system("pause");
-                lose();
                 goto jump5;
                 break;
             }
@@ -205,45 +211,46 @@ jump3:
 
         for (i = 0; i <= 3; i++)
         {
+            std::cout << "==============================================" << '\n';
             std::cout << "Enter guess: ";
             std::cin >> guess;
+            std::cout << "==============================================" << '\n';
 
             if (guess == num)
             {
-                std::cout << "\nCongrats, you have guessed the right number which is, " << num;
+                win();
+                std::cout << "\nCongrats " << playersName << ", you have guessed the right \n"
+                    << "number which is, " << num << ".";
                 std::cout << "\nNumber of turns you have used: " << i + 1 << '\n' << std::endl;
                 system("pause");
-                win();
                 goto jump5;
                 break;
             }
             else if (guess < num)
             {
-                std::cout << "\nYour guess is lower than the number, Turns left: " << 3 - (i + 1)
-                    << "\n";
+                std::cout << "\nYour guess is lower than the number, Turns left: " << 3 - (i + 1);
                 if (3 - (i + 1) > 0)
                 {
                     std::cout << "\nTry again, entering a number higher than previous!"
-                        << "\n" << std::endl;
+                        << '\n' << std::endl;
                 }
             }
             else if (guess > num)
             {
-                std::cout << "\nYour guess is higher than number, Turns left: " << 3 - (i + 1)
-                    << "\n";
+                std::cout << "\nYour guess is higher than number, Turns left: " << 3 - (i + 1);
+
                 if (3 - (i + 1) > 0)
                 {
                     std::cout << "\nTry again, entering a number lower than previous! "
-                        << "\n" << std::endl;
+                        << '\n' << std::endl;
                 }
             }
             if (i == 2)
             {
-
-                std::cout << "\n\nSorry, you failed to guess the right number.";
+                lose();
+                std::cout << "\n\nSorry " << playersName << " failed to guess the right number.";
                 std::cout << "\nThe right answer is: " << num << '\n' << std::endl;
                 system("pause");
-                lose();
                 goto jump5;
                 break;
             }
@@ -258,8 +265,12 @@ jump5:
     system("CLS");
     std::cout << "==============================================" << '\n';
     std::cout << std::endl;
-    std::cout << "Do you want to play again? [Y/N]\n";
-    std::cout << ">> ";
+    std::left;
+    std::cout << std::setw(40) << "Do you want to play again? [Y/N]\n";
+    std::cout << std::endl;
+    std::cout << "==============================================" << '\n';
+    std::cout << std::endl;
+    std::cout << std::setw(20) << ">> ";
     std::cin >> playAgain;
     std::cout << std::endl;
     switch (playAgain)
@@ -269,7 +280,6 @@ jump5:
         goto jump3;
     case 'N':
     case 'n':
-        std::cout << std::endl;
         std::cout << "==============================================" << '\n';
         return 0;
     default:
