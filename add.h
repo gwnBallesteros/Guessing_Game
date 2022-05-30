@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <string>
 
 void startHeader()
 {
@@ -32,6 +33,7 @@ void pickLevel()
     std::cout << std::endl;
     std::cout << std::setw(21) << ">> ";
 }
+
 
 void casHeaderOne()
 {
