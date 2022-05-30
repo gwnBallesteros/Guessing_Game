@@ -33,8 +33,6 @@ int main()
     char playAgain;
     std::string playersName;
     int num, guess, i;
-    int counter;
-    bool guessed;
 
     //Start 
 jump1:
@@ -149,9 +147,9 @@ jump3:
     case 'b':
         casHeaderTwo();
         srand(time(0));
-        num = rand() % 24;
+        num = rand() % 49;
 
-        for (i = 0; i <= 7; i++)
+        for (i = 0; i <= 5; i++)
         {
             std::cout << "Enter guess: ";
             std::cin >> guess;
@@ -167,9 +165,9 @@ jump3:
             }
             else if (guess < num)
             {
-                std::cout << "\nYour guess is lower than the number, Turns left: " << 7 - (i + 1)
+                std::cout << "\nYour guess is lower than the number, Turns left: " << 5 - (i + 1)
                     << "\n";
-                if (7 - (i + 1) > 0)
+                if (5 - (i + 1) > 0)
                 {
                     std::cout << "\nTry again, entering a number higher than previous!"
                         << "\n" << std::endl;
@@ -177,15 +175,15 @@ jump3:
             }
             else if (guess > num)
             {
-                std::cout << "\nYour guess is higher than number, Turns left: " << 7 - (i + 1)
+                std::cout << "\nYour guess is higher than number, Turns left: " << 5 - (i + 1)
                     << "\n";
-                if (7 - (i + 1) > 0)
+                if (5 - (i + 1) > 0)
                 {
                     std::cout << "\nTry again, entering a number lower than previous! "
                         << "\n" << std::endl;
                 }
             }
-            if (i == 6)
+            if (i == 4)
             {
 
                 std::cout << "\n\nSorry, you failed to guess the right number.";
@@ -202,9 +200,9 @@ jump3:
     case 'c':
         casHeaderThree();
         srand(time(0));
-        num = rand() % 24;
+        num = rand() % 100;
 
-        for (i = 0; i <= 7; i++)
+        for (i = 0; i <= 3; i++)
         {
             std::cout << "Enter guess: ";
             std::cin >> guess;
@@ -220,9 +218,9 @@ jump3:
             }
             else if (guess < num)
             {
-                std::cout << "\nYour guess is lower than the number, Turns left: " << 7 - (i + 1)
+                std::cout << "\nYour guess is lower than the number, Turns left: " << 3 - (i + 1)
                     << "\n";
-                if (7 - (i + 1) > 0)
+                if (3 - (i + 1) > 0)
                 {
                     std::cout << "\nTry again, entering a number higher than previous!"
                         << "\n" << std::endl;
@@ -230,15 +228,15 @@ jump3:
             }
             else if (guess > num)
             {
-                std::cout << "\nYour guess is higher than number, Turns left: " << 7 - (i + 1)
+                std::cout << "\nYour guess is higher than number, Turns left: " << 3 - (i + 1)
                     << "\n";
-                if (7 - (i + 1) > 0)
+                if (3 - (i + 1) > 0)
                 {
                     std::cout << "\nTry again, entering a number lower than previous! "
                         << "\n" << std::endl;
                 }
             }
-            if (i == 6)
+            if (i == 2)
             {
 
                 std::cout << "\n\nSorry, you failed to guess the right number.";
