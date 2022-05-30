@@ -17,6 +17,8 @@ void startHeader();
 
 void pickLevel();
 
+char press_start();
+
 void casHeaderOne();
 
 void casHeaderTwo();

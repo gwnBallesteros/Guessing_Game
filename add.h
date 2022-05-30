@@ -34,7 +34,6 @@ void pickLevel()
     std::cout << std::setw(21) << ">> ";
 }
 
-
 void casHeaderOne()
 {
     std::cout << "==============================================" << '\n';
