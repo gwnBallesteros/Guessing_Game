@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Guessing Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="add.cpp">
+    <ClCompile Include="GuessingGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
