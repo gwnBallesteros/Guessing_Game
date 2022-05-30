@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
-#include <string>
 
+//HEADER start of the Game
 void startHeader()
 {
     std::cout << "==============================================" << '\n';
@@ -17,9 +17,9 @@ void startHeader()
     std::cout << std::endl;
 }
 
+//HEADER Choose the level of difficulty of the game
 void pickLevel()
 {
-    //Choose the level of difficulty of the game
     std::cout << "==============================================" << '\n';
     std::cout << std::endl;
     std::left;
@@ -34,6 +34,7 @@ void pickLevel()
     std::cout << std::setw(21) << ">> ";
 }
 
+//Inside the switch statement
 void casHeaderOne()
 {
     std::cout << "==============================================" << '\n';
@@ -41,6 +42,9 @@ void casHeaderOne()
     std::cout << "You have 7 goes to guess the secret number" << '\n';
     std::cout << "HINT: It is a number less than 25!" << '\n';
     std::cout << std::endl;
+    std::cout << "==============================================" << '\n';
+    system("pause");
+    system("CLS");
 }
 
 void casHeaderTwo()
@@ -50,6 +54,9 @@ void casHeaderTwo()
     std::cout << "You have 5 goes to guess the secret number" << '\n';
     std::cout << "HINT: It is a number less than 50!" << '\n';
     std::cout << std::endl;
+    std::cout << "==============================================" << '\n';
+    system("pause");
+    system("CLS");
 }
 
 void casHeaderThree()
@@ -59,8 +66,12 @@ void casHeaderThree()
     std::cout << "You have 3 goes to guess the secret number" << '\n';
     std::cout << "HINT: It is a number less than 100!" << '\n';
     std::cout << std::endl;
+    std::cout << "==============================================" << '\n';
+    system("pause");
+    system("CLS");
 }
 
+//Results of the Game
 void win()
 {
     system("CLS");

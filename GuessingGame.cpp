@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <string>
 
+//Non-return type functions
 void startHeader();
 
 void pickLevel();
@@ -38,6 +39,7 @@ int main()
     //Start 
 jump1:
     system("CLS");
+    //Header
     startHeader();
 
     //Prompt player to enter the game
@@ -46,6 +48,7 @@ jump1:
     std::cout << std::setw(21) << ">> ";
     std::cin >> pressStart;
 
+    //Start of the switch statement
     switch (pressStart)
     {
     case 'X':
@@ -64,7 +67,7 @@ jump1:
         std::cout << "==============================================" << '\n';
         system("pause");
         goto jump1;
-    }
+    } //End of the switch statement
 
     //Prompt the player's name
 jump2:
@@ -88,17 +91,23 @@ jump3:
     std::cout << "==============================================" << '\n';
     system("pause");
 
+    //Start of the Switch statement
     system("CLS");
     switch (levelDifficulty)
     {
     case 'A':
     case 'a':
+        //Header
         casHeaderOne();
+
+        //Statement for generating random numbers
         srand(time(0));
         num = rand() % 24;
 
+        //Start of the for loop
         for (i = 0; i <= 7; i++)
         {
+            //Prompt player to enter the guess number
             std::cout << "==============================================" << '\n';
             std::cout << "Enter guess: ";
             std::cin >> guess;
@@ -116,23 +125,27 @@ jump3:
             }
             else if (guess < num)
             {
-                std::cout << "\nYour guess is lower than the number, Turns left: " << 7 - (i + 1);
+                std::cout << "\nYour guess is lower than the number! \nTurns left: " << 7 - (i + 1);
 
                 if (7 - (i + 1) > 0)
                 {
-                    std::cout << "\nTry again, entering a number higher than previous!"
+                    std::cout << "\nEnter a number higher than the previous!"
                         << "\n" << std::endl;
+                    std::cout << "==============================================" << '\n';
+                    system("pause");
                     system("CLS");
                 }
-            }
+            } //End of the for loop
             else if (guess > num)
             {
-                std::cout << "\nYour guess is higher than number, Turns left: " << 7 - (i + 1);
+                std::cout << "\nYour guess is higher than number! \nTurns left: " << 7 - (i + 1);
 
                 if (7 - (i + 1) > 0)
                 {
-                    std::cout << "\nTry again, entering a number lower than previous! "
+                    std::cout << "\nEnter a number lower than the previous!"
                         << "\n" << std::endl;
+                    std::cout << "==============================================" << '\n';
+                    system("pause");
                     system("CLS");
                 }
             }
@@ -150,12 +163,17 @@ jump3:
 
     case 'B':
     case 'b':
+        //Header
         casHeaderTwo();
+
+        //Statement for generating random numbers
         srand(time(0));
         num = rand() % 49;
 
+        //Start of the for loop
         for (i = 0; i <= 5; i++)
         {
+            //Prompt player to enter the guess number
             std::cout << "==============================================" << '\n';
             std::cout << "Enter guess: ";
             std::cin >> guess;
@@ -177,8 +195,11 @@ jump3:
 
                 if (5 - (i + 1) > 0)
                 {
-                    std::cout << "\nTry again, entering a number higher than previous!"
+                    std::cout << "\nEnter a number higher than the previous!"
                         << "\n" << std::endl;
+                    std::cout << "==============================================" << '\n';
+                    system("pause");
+                    system("CLS");
                 }
             }
             else if (guess > num)
@@ -187,10 +208,13 @@ jump3:
 
                 if (5 - (i + 1) > 0)
                 {
-                    std::cout << "\nTry again, entering a number lower than previous! "
+                    std::cout << "\nEnter a number lower than the previous!"
                         << "\n" << std::endl;
+                    std::cout << "==============================================" << '\n';
+                    system("pause");
+                    system("CLS");
                 }
-            }
+            } //End of the for loop
             if (i == 4)
             {
                 lose();
@@ -205,12 +229,17 @@ jump3:
 
     case 'C':
     case 'c':
+        //Header
         casHeaderThree();
+
+        //Statement for generating random numbers
         srand(time(0));
         num = rand() % 100;
 
+        //Start of the for loop
         for (i = 0; i <= 3; i++)
         {
+            //Prompt player to enter the guess number
             std::cout << "==============================================" << '\n';
             std::cout << "Enter guess: ";
             std::cin >> guess;
@@ -231,8 +260,11 @@ jump3:
                 std::cout << "\nYour guess is lower than the number, Turns left: " << 3 - (i + 1);
                 if (3 - (i + 1) > 0)
                 {
-                    std::cout << "\nTry again, entering a number higher than previous!"
+                    std::cout << "\nEnter a number higher than the previous!"
                         << '\n' << std::endl;
+                    std::cout << "==============================================" << '\n';
+                    system("pause");
+                    system("CLS");
                 }
             }
             else if (guess > num)
@@ -241,10 +273,13 @@ jump3:
 
                 if (3 - (i + 1) > 0)
                 {
-                    std::cout << "\nTry again, entering a number lower than previous! "
+                    std::cout << "\nEnter a number lower than the previous!"
                         << '\n' << std::endl;
+                    std::cout << "==============================================" << '\n';
+                    system("pause");
+                    system("CLS");
                 }
-            }
+            } //End of the for loop
             if (i == 2)
             {
                 lose();
@@ -259,8 +294,9 @@ jump3:
     
     default:
         goto jump3;
-    }
+    } //End of the switch statement
 
+    //Ask the player if they want to play again
 jump5:
     system("CLS");
     std::cout << "==============================================" << '\n';
@@ -273,6 +309,8 @@ jump5:
     std::cout << std::setw(20) << ">> ";
     std::cin >> playAgain;
     std::cout << std::endl;
+
+    //Start of the switch statement
     switch (playAgain)
     {
     case 'Y':
@@ -284,7 +322,7 @@ jump5:
         return 0;
     default:
         goto jump5;
-    }
+    } //End of the Switch statement
  
     return 0;
 }
