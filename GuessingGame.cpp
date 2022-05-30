@@ -17,8 +17,6 @@ void startHeader();
 
 void pickLevel();
 
-char press_start();
-
 void casHeaderOne();
 
 void casHeaderTwo();
@@ -264,13 +262,20 @@ jump5:
     std::cout << ">> ";
     std::cin >> playAgain;
     std::cout << std::endl;
-    if (playAgain == 'Y' || playAgain == 'y')
+    switch (playAgain)
+    {
+    case 'Y':
+    case 'y':
         goto jump3;
-    else if (playAgain == 'N' || playAgain == 'n')
+    case 'N':
+    case 'n':
+        std::cout << std::endl;
+        std::cout << "==============================================" << '\n';
         return 0;
-    else
+    default:
         goto jump5;
-
+    }
+ 
     return 0;
 }
 
