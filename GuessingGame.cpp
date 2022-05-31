@@ -116,7 +116,7 @@ jump3:
             if (guess == num)
             {
                 win();
-                std::cout << "\nCongrats " << playersName << ", you have guessed the right \n"
+                std::cout << "Congrats " << playersName << ", you have guessed the right \n"
                     << "number which is, " << num << ".";
                 std::cout << "\nNumber of turns you have used: " << i + 1 << '\n' << std::endl;
                 system("pause");
@@ -152,7 +152,7 @@ jump3:
             if (i == 6)
             {
                 lose();
-                std::cout << "\n\nSorry " << playersName << " failed to guess the right number.";
+                std::cout << "Sorry " << playersName << " failed to guess the right number.";
                 std::cout << "\nThe right answer is: " << num << '\n' << std::endl;
                 system("pause");
                 goto jump5;
@@ -182,7 +182,7 @@ jump3:
             if (guess == num)
             {
                 win();
-                std::cout << "\nCongrats " << playersName << ", you have guessed the right \n"
+                std::cout << "Congrats " << playersName << ", you have guessed the right \n"
                     << "number which is, " << num << ".";
                 std::cout << "\nNumber of turns you have used: " << i + 1 << '\n' << std::endl;
                 system("pause");
@@ -218,7 +218,7 @@ jump3:
             if (i == 4)
             {
                 lose();
-                std::cout << "\n\nSorry " << playersName << " failed to guess the right number.";
+                std::cout << "Sorry " << playersName << " failed to guess the right number.";
                 std::cout << "\nThe right answer is: " << num << '\n' << std::endl;
                 system("pause");
                 goto jump5;
@@ -248,7 +248,7 @@ jump3:
             if (guess == num)
             {
                 win();
-                std::cout << "\nCongrats " << playersName << ", you have guessed the right \n"
+                std::cout << "Congrats " << playersName << ", you have guessed the right \n"
                     << "number which is, " << num << ".";
                 std::cout << "\nNumber of turns you have used: " << i + 1 << '\n' << std::endl;
                 system("pause");
@@ -283,7 +283,7 @@ jump3:
             if (i == 2)
             {
                 lose();
-                std::cout << "\n\nSorry " << playersName << " failed to guess the right number.";
+                std::cout << "Sorry " << playersName << " failed to guess the right number.";
                 std::cout << "\nThe right answer is: " << num << '\n' << std::endl;
                 system("pause");
                 goto jump5;
