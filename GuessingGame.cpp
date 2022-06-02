@@ -191,7 +191,7 @@ jump3:
             }
             else if (guess < num)
             {
-                std::cout << "\nYour guess is lower than the number, Turns left: " << 5 - (i + 1);
+                std::cout << "\nYour guess is lower than the number, \nTurns left: " << 5 - (i + 1);
 
                 if (5 - (i + 1) > 0)
                 {
@@ -204,7 +204,7 @@ jump3:
             }
             else if (guess > num)
             {
-                std::cout << "\nYour guess is higher than number, Turns left: " << 5 - (i + 1);
+                std::cout << "\nYour guess is higher than number, \nTurns left: " << 5 - (i + 1);
 
                 if (5 - (i + 1) > 0)
                 {
@@ -257,7 +257,7 @@ jump3:
             }
             else if (guess < num)
             {
-                std::cout << "\nYour guess is lower than the number, Turns left: " << 3 - (i + 1);
+                std::cout << "\nYour guess is lower than the number, \nTurns left: " << 3 - (i + 1);
                 if (3 - (i + 1) > 0)
                 {
                     std::cout << "\nEnter a number higher than the previous!"
@@ -269,7 +269,7 @@ jump3:
             }
             else if (guess > num)
             {
-                std::cout << "\nYour guess is higher than number, Turns left: " << 3 - (i + 1);
+                std::cout << "\nYour guess is higher than number, \nTurns left: " << 3 - (i + 1);
 
                 if (3 - (i + 1) > 0)
                 {
