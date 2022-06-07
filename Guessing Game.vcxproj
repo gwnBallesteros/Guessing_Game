@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="add.cpp" />
     <ClCompile Include="GuessingGame.cpp" />
   </ItemGroup>
   <ItemGroup>
